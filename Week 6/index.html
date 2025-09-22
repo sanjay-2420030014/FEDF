@@ -88,20 +88,20 @@ function displayWeather(city, data) {
   setTimeout(() => weatherResult.classList.add("show"), 50);
 }
 
-// ✅ Button click
+//  Button click
 getWeatherBtn.addEventListener("click", () => {
   const city = cityInput.value.trim();
   fetchWeather(city);
 });
 
-// ✅ Enter key support
+//  Enter key support
 cityInput.addEventListener("keypress", (e) => {
   if (e.key === "Enter") {
     getWeatherBtn.click();
   }
 });
 
-// ✅ Load last searched city
+//  Load last searched city
 window.onload = () => {
   const lastCity = localStorage.getItem("lastCity");
   if (lastCity) {
@@ -111,3 +111,4 @@ window.onload = () => {
 </script>
 </body>
 </html>
+
